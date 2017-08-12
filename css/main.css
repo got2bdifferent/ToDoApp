@@ -1,0 +1,622 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    /*text-align: center;*/
+    z-index: 2;
+}
+header {
+    width: 98%;
+    height: 80px;
+    background-color: #25B99A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 15px 15px 15px 15px;
+}
+header input {
+    width: 95%;
+    height: 50px;
+    float: left;
+    text-indent: 18px;
+    padding: 0 60px 0 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px 25px 25px 5px;
+    border: 0px;
+    color: white;
+    box-shadow: none;
+    outline: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+header input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #FFFFFF;
+}
+header input::-moz-placeholder { /* Firefox 19+ */
+    color: #FFFFFF;
+}
+header input:-ms-input-placeholder { /* IE 10+ */
+    color: #FFFFFF;
+}
+header input:-moz-placeholder { /* Firefox 18- */
+    color: #FFFFFF;
+}
+
+header button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cusrsor: pointer;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+ul.todo {
+    width: 95%;
+    float: left;
+    height: auto;
+
+
+    align: center;
+
+
+
+    list-style: none;
+    /*margin: 0 0 10px 0;*/
+}
+
+ul.todo li {
+    padding: 35px 130px 10px 25px;
+    position: relative;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    vertical-align: middle;
+    min-height: 40px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    margin: 0 0px 10px 0px;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+}
+
+ul.todo li:last-of-type {
+    margin: 0px;
+}
+
+ul.todo li .buttons {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 15px;
+}
+
+ul.todo li .buttons button {
+    height: 50px;
+    width: 40px;
+    float: left;
+    background: none;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    position: relative;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+ul.todo li .buttons button:last-of-type:before {
+    content: '';
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+@media only screen and (max-width: 1234px) {
+    header input { width: 94%;}
+    header {
+        width: 97.7%
+    }
+    ul.todo { width: 94%; }
+}
+
+@media only screen and (max-width: 1050px) {
+    header input { width: 93%;}
+    header {
+        width: 97.1%
+    }
+    ul.todo { width: 93.5%; }
+}
+@media only screen and (max-width: 917px) {
+    ul.todo { width: 93%; }
+}
+
+@media only screen and (max-width: 847px) {
+    header input { width: 92%;}
+    header {
+        width: 96.5%
+    }
+    ul.todo { width: 92%; }
+    ul.todo li {
+        padding: 35px 130px 30px 25px;
+    }
+    ul.todo li .buttons {
+        padding-top: 25px;
+    }
+}
+@media only screen and (max-width: 771px) {
+    header input {
+        width: 91%;
+    }
+}
+
+@media only screen and (max-width: 719px) {
+    header {
+        width: 96%
+    }
+    ul.todo { width: 91%; }
+}
+@media only screen and (max-width: 663px) {
+    header input {
+        width: 90%;
+    }
+    ul.todo { width: 90%; }
+}
+
+@media only screen and (max-width: 609px) {
+    header input {
+        width: 89%;
+    }
+    header {
+        width: 95%
+    }
+    ul.todo { width: 89.5%; }
+}
+@media only screen and (max-width: 545px) {
+    header input {
+        width: 88%;
+    }
+    ul.todo { width: 89%; }
+}
+@media only screen and (max-width: 500px) {
+    header {
+        width: 94%
+    }
+    header input {
+        width: 87%;
+    }
+    ul.todo { width: 87.5%; }
+}
+@media only screen and (max-width: 463px) {
+    header input {
+        width: 85%;
+    }
+    ul.todo { width: 86.5%; }
+}
+@media only screen and (max-width: 444px) {
+    header {
+        width: 93.1%;
+    }
+    ul.todo { width: 85.5%; }
+}
+
+
+@media only screen and (max-width: 421px) {
+    header input {
+        width: 83%;
+    }
+
+    ul.todo {
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    ul.todo { width: 84%; }
+}
+
+@media only screen and (max-width: 364px) {
+    header {
+        width: 91.7%;
+    }
+    header input {
+        width: 82%;
+    }
+    ul.todo { width: 82.5%; }
+}
+
+
+header button svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+}
+
+header button svg .fill {
+    fill: #25B99A;
+}
+
+body {
+    background: #cccccc;
+    padding: 120px 0 0 0;
+}
+
+
+/*ul.todo li .buttons button.remove svg {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50;
+    left: 50;
+    margin: -11px 0 0 -11px;
+    !*background-image: url("img/icons8-Trash-64.png");*!
+}*/
+
+/*ul.todo li .buttons button.remove svg .fill{
+    fill: red
+}*/
+
+ul.todo li .buttons button.remove {
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-image: url(../img/icons8-Trash-64.png);
+    margin: 9px 0 0 -11px;
+}
+
+ul.todo li .buttons button.remove:hover {
+    background-image: url(../img/icons8-Trash-64_red.png);
+}
+/*ul.todo li .buttons button.complete svg .fill{
+    fill: green;
+}*/
+
+
+ul.todo li .buttons button.complete {
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-image: url(../img/icons8-Ok-50.png);
+    margin: 10px 0 0 11px;
+}
+
+ul.todo li .buttons button.complete:hover {
+background-image: url(../img/icons8-Ok-50_Filled.png);
+}
+
+
+
+    ul#completed li .buttons button.complete {
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        background-image: url(../img/icons8-Ok-50_Filled.png);
+        margin: 10px 0 0 11px;
+    }
+
+ul#completed li .buttons button.complete:hover {
+     background-image: url(../img/icons8-Ok-50.png);
+ }
+
+
+ul.todo#completed:not(:empty):before {
+
+}
+
+ul.todo#completed:not(:empty):before {
+    content: '';
+    height: 1px;
+    background: #DBE5E0;
+    margin: 0 0 0 50px;
+    width: 87%;
+
+}
+
+.toDoText, .completedText {
+    display: block;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+}
